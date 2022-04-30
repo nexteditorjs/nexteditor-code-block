@@ -14,14 +14,17 @@
   },
   "dependencies": {
     "@nexteditorjs/nexteditor-core": "^0.0.35",
+    "@nexteditorjs/nexteditor-ui-base": "^0.0.1",
     "lodash.clonedeep": "^4.5.0",
-    "lodash.debounce": "^4.0.8"
+    "lodash.debounce": "^4.0.8",
+    "prismjs": "1.28.0"
   },
   "devDependencies": {
     "@types/blueimp-md5": "^2.18.0",
     "@types/lodash.clonedeep": "^4.5.0",
     "@types/lodash.debounce": "^4.0.6",
     "@types/node": "^12.0.0",
+    "@types/prismjs": "1.26.0",
     "typescript": "^4.5.4",
     "prettier": "^2.5.1",
     "sass": "*",

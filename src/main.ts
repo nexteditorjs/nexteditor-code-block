@@ -8,6 +8,8 @@ import {
 } from '@nexteditorjs/nexteditor-core';
 import { MarkdownInputHandler } from '@nexteditorjs/nexteditor-input-handlers';
 
+import { CodeBlock, CodeTextDecorator } from './code-block';
+
 import './style.css';
 
 const logger = getLogger('main');
@@ -15,9 +17,10 @@ const logger = getLogger('main');
 const app = document.querySelector<HTMLDivElement>('#app');
 assert(logger, app, 'app does not exists');
 
-const editor = createEditor(app, new LocalDoc(createEmptyDoc() as any), {
+const editor = createEditor(app, new LocalDoc(createEmptyDoc()), {
   components: {
-    // blocks: [ListBlock],
+    blocks: [CodeBlock],
+    decorators: [new CodeTextDecorator()],
   },
 });
 

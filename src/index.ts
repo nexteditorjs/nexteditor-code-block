@@ -1,1 +1,4 @@
-import './code.scss';
+import { CodeBlock, CodeTextDecorator } from './code-block';
+
+export { CodeTextDecorator };
+export default CodeBlock;
