@@ -3,11 +3,14 @@ import {
   BlockPath, createBlockContentElement, createElement,
   NextEditor,
 } from '@nexteditorjs/nexteditor-core';
+import CodeBlockCaptionInputHandler from './caption/caption-input-handler';
 import { DocCodeBlockData } from './code-block-data';
 import { updateCodeBlockElementStyles } from './code-block-dom';
 import { createCodeBlockHeader } from './header';
 
 export function createCodeBlockContent(editor: NextEditor, path: BlockPath, blockElement: BlockElement, codeData: DocCodeBlockData): BlockContentElement {
+  CodeBlockCaptionInputHandler.init(editor);
+
   const children = codeData.children;
   const blockContent = createBlockContentElement(blockElement, 'div');
   blockContent.setAttribute('data-language', codeData.language || 'text');

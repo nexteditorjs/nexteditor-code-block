@@ -13,6 +13,7 @@ import { changeCodeBlockLanguage, changeCodeBlockWrap } from '../change-code-dat
 import { DocCodeBlockData } from '../code-block-data';
 import { getTextContainer } from '../child-container';
 import { SUPPORTED_LANGUAGES } from '../languages';
+import { toggleCodeCaption } from '../caption/code-caption';
 
 const logger = getLogger('code-block-header');
 
@@ -93,6 +94,7 @@ function handleCodeHeaderButtonClick(editor: NextEditor, event: Event) {
   if (id === 'wrap') {
     const old = editor.getBlockData(block) as DocCodeBlockData;
     changeCodeBlockWrap(editor, block, !old.nowrap);
+    return;
   }
   //
   if (id === 'copy') {
@@ -110,6 +112,12 @@ function handleCodeHeaderButtonClick(editor: NextEditor, event: Event) {
     }).catch((err) => {
       logger.error(err.message);
     });
+    return;
+  }
+
+  //
+  if (id === 'caption') {
+    toggleCodeCaption(editor, block);
   }
 }
 

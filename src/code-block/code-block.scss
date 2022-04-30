@@ -43,7 +43,6 @@
         }
       }
 
-      background-color: var(--background-code);
       counter-reset: code-line;
 
       > div[data-type=block-tools] {
@@ -103,6 +102,7 @@
       >div[data-type=block-content] {
         >div.editor-code-root {
           >div.code-text-root {
+            background-color: var(--background-code);
             >div.child[data-type=editor-container] {
               padding-left: 32px;
               padding-top: 32px;
@@ -226,6 +226,12 @@
                   }
                 }
               }
+            }
+          }
+          >div.code-caption-root {
+            padding: 8px;
+            * {
+              color: #aaa;
             }
           }
         }

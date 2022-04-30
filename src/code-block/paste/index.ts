@@ -3,6 +3,7 @@ import {
   getParentContainer, isRootContainer,
   NextEditor, NextEditorInputHandler, SimpleBlockPosition,
 } from '@nexteditorjs/nexteditor-core';
+import { isCodeCaptionBlock } from '../caption/code-caption';
 import { isCodeBlock } from '../code-block-dom';
 
 const logger = getLogger('paste-in-table-block');
@@ -32,6 +33,10 @@ class PasteEventHandler implements NextEditorInputHandler {
     assert(logger, parentBlock, 'no parent block');
     //
     if (!isCodeBlock(parentBlock)) {
+      return false;
+    }
+    //
+    if (isCodeCaptionBlock(editor, startBlock)) {
       return false;
     }
     //
