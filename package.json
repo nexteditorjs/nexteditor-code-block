@@ -1,6 +1,6 @@
 {
   "name": "@nexteditorjs/nexteditor-code-block",
-  "version": "0.0.3",
+  "version": "0.0.36",
   "files": [
     "dist"
   ],
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nexteditorjs/nexteditor-core": "^0.0.36",
-    "@nexteditorjs/nexteditor-ui-base": "^0.0.3",
+    "@nexteditorjs/nexteditor-ui-base": "^0.0.36",
     "lodash.clonedeep": "^4.5.0",
     "lodash.debounce": "^4.0.8",
     "prismjs": "1.28.0"
