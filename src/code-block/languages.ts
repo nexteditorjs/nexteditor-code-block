@@ -34,7 +34,6 @@ import 'prismjs/components/prism-less';
 import 'prismjs/components/prism-lisp';
 import 'prismjs/components/prism-livescript';
 import 'prismjs/components/prism-lua';
-
 import 'prismjs/components/prism-makefile';
 import 'prismjs/components/prism-markdown';
 import 'prismjs/components/prism-markup';
@@ -68,10 +67,6 @@ import 'prismjs/components/prism-vhdl';
 import 'prismjs/components/prism-visual-basic';
 import 'prismjs/components/prism-wasm';
 import 'prismjs/components/prism-yaml';
-
-import languages from 'prismjs/components.json';
-
-console.log(languages);
 
 const SUPPORTED_LANGUAGES = {
   plain: { name: 'Plain Text', aliases: ['txt', 'text'] },
